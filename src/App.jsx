@@ -22,11 +22,16 @@ function App() {
     setSelectedCards((previousCard) => {
       return [...previousCard, id];
     });
+    setCharacters(shuffle(characters));
   }
 
   if (selectedCards.length > highestScore) {
     setHighestScore(selectedCards.length);
   }
+
+  const shuffle = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
 
   return (
     <>
