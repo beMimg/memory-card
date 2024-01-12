@@ -2,7 +2,9 @@ export function Card({ character }) {
   console.log(character);
   return (
     <div className="card">
-      <img className="card-img" src={character.image} alt="charater image" />
+      <div className="card-img-container">
+        <img className="card-img" src={character.image} alt="charater image" />
+      </div>
       <div className="card-content">
         <div className="card-header">
           <p className="card-header-item-left">{character.race}</p>
