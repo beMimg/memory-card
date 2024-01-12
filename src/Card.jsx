@@ -1,7 +1,6 @@
-export function Card({ character }) {
-  console.log(character);
+export function Card({ character, handleClick }) {
   return (
-    <div className="card">
+    <div className="card" onClick={() => handleClick(character.id)}>
       <div className="card-img-container">
         <img className="card-img" src={character.image} alt="charater image" />
       </div>
