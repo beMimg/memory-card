@@ -1,9 +1,15 @@
+@font-face {
+  font-family: Saiyan-san;
+  src: url(./assets/Saiyan-Sans.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sqans-serif;
 }
 
 #root {
@@ -11,8 +17,16 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: 5% 95%;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.bg {
+  position: absolute;
+  background-image: url(./assets/kame-house.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  filter: contrast(0.7);
 }
 
 h1,
@@ -27,10 +41,40 @@ p {
 }
 
 header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: yellow;
+  font-family: Saiyan-san;
+}
+
+.header-title {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  color: white;
+  justify-content: center;
+}
+
+.header-title p {
+  font-size: 6rem;
+  text-shadow: 4px 4px 0 #000000, -4px -4px 0 #000000, 4px -4px 0 #000000,
+    -4px 4px 0 #000000;
+}
+
+.red {
+  color: red;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content p {
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+    -1px 1px 0 #000000;
 }
 
 main {
@@ -38,11 +82,11 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 20px;
   justify-content: center;
-  padding: 30px;
+  padding: 100px;
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   height: auto;
   position: relative;
   border-radius: 10px;
@@ -50,6 +94,9 @@ main {
   overflow: hidden;
 }
 
+.card:focus {
+  outline: 0;
+}
 .card-img-container {
   position: absolute;
   height: 100%;

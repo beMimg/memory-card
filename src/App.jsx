@@ -11,8 +11,6 @@ function App() {
     fetchData("https://dragonball-api.com/api/characters", setCharacters);
   }, []);
 
-  console.log(characters);
-
   function handleSelectedCard(id) {
     if (selectedCards.includes(id)) {
       console.log("over");
@@ -35,8 +33,12 @@ function App() {
 
   return (
     <>
+      <div className="bg"></div>
       <header>
-        <h1 className="header-title">Memory Card Game</h1>
+        <div className="header-title">
+          <p>Memory</p>
+          <p className="red">Card</p>
+        </div>
         <div className="header-content">
           <p>Best Score: {highestScore}</p>
           <p>Current Score: {selectedCards.length}</p>
