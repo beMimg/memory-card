@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import { Card } from "./Card";
+import { StartGameModal } from "./StartGame";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
   const [highestScore, setHighestScore] = useState(0);
+  const [gameStatus, setGameStatus] = useState("menu");
+
+  const statusIsMenu = gameStatus === "menu";
+  const statusIsGame = gameStatus === "game";
 
   useEffect(() => {
     fetchData("https://dragonball-api.com/api/characters", setCharacters);
@@ -45,7 +50,12 @@ function App() {
         </div>
       </header>
       <main>
-        {characters.length > 0 ? (
+        {statusIsMenu && (
+          <StartGameModal
+            handleStart={() => setGameStatus("game")}
+          ></StartGameModal>
+        )}
+        {characters.length > 0 && statusIsGame ? (
           characters.map((character) => (
             <Card
               key={character.id}
