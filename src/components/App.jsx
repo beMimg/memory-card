@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import { Card } from "./Card";
 import { StartGameModal } from "./StartGame";
+import "../style/app.css";
 
 function App() {
   const [characters, setCharacters] = useState([]);

@@ -1,3 +1,5 @@
+import "../style/card.css";
+
 export function Card({ character, handleClick }) {
   return (
     <div className="card" onClick={() => handleClick(character.id)}>
