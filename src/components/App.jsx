@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import { Card } from "./Card";
-import { StartGameModal } from "./StartGame";
+import { Modal } from "./Modal";
 import "../style/app.css";
 
 function App() {
@@ -63,22 +63,22 @@ function App() {
       </header>
       <main>
         {statusIsMenu && (
-          <StartGameModal
+          <Modal
             condition={"menu"}
             handleClick={() => handleRepeatGame()}
-          ></StartGameModal>
+          ></Modal>
         )}
         {statusIsLost && (
-          <StartGameModal
+          <Modal
             condition={"lost"}
             handleClick={() => handleRepeatGame()}
-          ></StartGameModal>
+          ></Modal>
         )}
         {statusIsWon && (
-          <StartGameModal
+          <Modal
             condition={"won"}
             handleClick={() => handleRepeatGame()}
-          ></StartGameModal>
+          ></Modal>
         )}
         {characters.length > 0 && statusIsGame ? (
           characters.map((character) => (

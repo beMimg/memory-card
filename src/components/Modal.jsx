@@ -1,6 +1,6 @@
-import "../style/start-game-modal.css";
+import "../style/modal.css";
 
-export function StartGameModal({ condition, handleClick }) {
+export function Modal({ condition, handleClick }) {
   const won = condition === "won";
   const lost = condition === "lost";
   const menu = condition === "menu";
@@ -9,8 +9,18 @@ export function StartGameModal({ condition, handleClick }) {
     <div className="modal">
       <div className="modal-content">
         <div className="modal-header">
-          <h1>{menu ? "Welcome" : won ? "Good Job!" : lost && "You lost"}</h1>
-          <p>
+          <h1
+            className={
+              menu
+                ? "modal-title menu"
+                : won
+                ? "modal-title won"
+                : lost && "modal-title lost"
+            }
+          >
+            {menu ? "Welcome" : won ? "Good Job!" : lost && "You lost"}
+          </h1>
+          <p className="modal-small-text">
             {menu
               ? "Test your memory"
               : won
