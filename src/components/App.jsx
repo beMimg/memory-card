@@ -11,6 +11,8 @@ function App() {
 
   const statusIsMenu = gameStatus === "menu";
   const statusIsGame = gameStatus === "game";
+  const statusIsLost = gameStatus === "lost";
+  const statusIsWon = gameStatus === "won";
 
   useEffect(() => {
     fetchData("https://dragonball-api.com/api/characters", setCharacters);
@@ -18,14 +20,18 @@ function App() {
 
   function handleSelectedCard(id) {
     if (selectedCards.includes(id)) {
-      console.log("over");
-      setSelectedCards([]);
+      setGameStatus("lost");
       return;
     }
     setSelectedCards((previousCard) => {
       return [...previousCard, id];
     });
     setCharacters(shuffle(characters));
+    console.log(characters.length);
+
+    if (selectedCards.length + 1 === characters.length) {
+      setGameStatus("won");
+    }
   }
 
   if (selectedCards.length > highestScore) {
@@ -35,6 +41,11 @@ function App() {
   const shuffle = (array) => {
     return array.sort(() => Math.random() - 0.5);
   };
+
+  function handleRepeatGame() {
+    setGameStatus("game");
+    setSelectedCards([]);
+  }
 
   return (
     <>
@@ -52,7 +63,20 @@ function App() {
       <main>
         {statusIsMenu && (
           <StartGameModal
-            handleStart={() => setGameStatus("game")}
+            condition={"menu"}
+            handleClick={() => handleRepeatGame()}
+          ></StartGameModal>
+        )}
+        {statusIsLost && (
+          <StartGameModal
+            condition={"lost"}
+            handleClick={() => handleRepeatGame()}
+          ></StartGameModal>
+        )}
+        {statusIsWon && (
+          <StartGameModal
+            condition={"won"}
+            handleClick={() => handleRepeatGame()}
           ></StartGameModal>
         )}
         {characters.length > 0 && statusIsGame ? (
