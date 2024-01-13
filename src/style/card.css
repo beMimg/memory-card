@@ -19,7 +19,7 @@
 }
 
 .card-img {
-  height: 80%;
+  height: 90%;
 }
 
 .card-content {
@@ -49,4 +49,9 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.card-title {
+  text-shadow: 4px 4px 0 #000000, -4px -4px 0 #000000, 4px -4px 0 #000000,
+    -4px 4px 0 #000000;
 }

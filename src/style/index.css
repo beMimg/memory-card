@@ -29,3 +29,134 @@ p {
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  #root {
+    grid-template-rows: 10% 90%;
+  }
+
+  .header-title p {
+    font-size: 3.5rem;
+  }
+
+  .header-content p {
+    font-size: 1.8rem;
+  }
+
+  .modal-title {
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+      -2px 2px 0 #000000;
+    font-size: 4rem;
+  }
+
+  .modal-small-text {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  #root {
+    grid-template-rows: 10% 90%;
+  }
+
+  .header-title p {
+    font-size: 3.5rem;
+  }
+
+  .header-content p {
+    font-size: 1.8rem;
+  }
+
+  .modal-content {
+    width: 50%;
+    height: 50%;
+  }
+
+  .modal-title {
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+      -2px 2px 0 #000000;
+    font-size: 5rem;
+  }
+
+  .modal-small-text {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+  }
+
+  .card-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    grid-template-rows: 10% 90%;
+  }
+
+  .header-title p {
+    font-size: 2rem;
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+      -2px 2px 0 #000000;
+  }
+
+  .header-content p {
+    font-size: 1.2rem;
+  }
+
+  .modal-content {
+    width: 60%;
+    height: 60%;
+  }
+
+  .modal-title {
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+      -2px 2px 0 #000000;
+    font-size: 4rem;
+  }
+
+  .modal-small-text {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 70px));
+  }
+
+  .card-header {
+    display: none;
+  }
+  .card-title {
+    font-size: 1rem;
+    text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+      -2px 2px 0 #000000;
+  }
+  .card-img {
+    height: 100%;
+  }
+}
