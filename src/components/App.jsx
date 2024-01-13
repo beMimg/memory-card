@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchData } from "./fetch";
 import { Card } from "./Card";
 import { Modal } from "./Modal";
+import { Header } from "./Header";
 import "../style/app.css";
 
 function App() {
@@ -28,7 +29,6 @@ function App() {
       return [...previousCard, id];
     });
     setCharacters(shuffle(characters));
-    console.log(characters.length);
 
     if (selectedCards.length + 1 === characters.length) {
       setGameStatus("won");
@@ -51,16 +51,10 @@ function App() {
   return (
     <>
       <div className="bg"></div>
-      <header>
-        <div className="header-title">
-          <p>Memory</p>
-          <p className="red">Card</p>
-        </div>
-        <div className="header-content">
-          <p>Best Score: {highestScore}</p>
-          <p>Current Score: {selectedCards.length}</p>
-        </div>
-      </header>
+      <Header
+        highestScore={highestScore}
+        selectedCards={selectedCards}
+      ></Header>
       <main>
         {statusIsMenu && (
           <Modal

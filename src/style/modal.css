@@ -64,7 +64,7 @@ a {
   justify-content: center;
 }
 
-button {
+.modal button {
   cursor: pointer;
   border: none;
   background-color: transparent;
