@@ -20,6 +20,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: left-right 1s ease;
 }
 
 .header-title p {
@@ -37,6 +38,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: right-left 1s ease;
 }
 
 .header-content p {
@@ -51,4 +53,33 @@ main {
   gap: 20px;
   justify-content: center;
   padding: 100px;
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes right-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bottom-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }

@@ -1,10 +1,24 @@
-.card {
+.tilt {
   background-color: rgba(0, 0, 0, 0.4);
   height: auto;
   position: relative;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
+  perspective: 800px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.tilt.show {
+  opacity: 1;
+}
+.card {
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  animation: closeUp 2s ease infinite alternate;
 }
 
 .card-img-container {
@@ -54,4 +68,13 @@
 .card-title {
   text-shadow: 4px 4px 0 #000000, -4px -4px 0 #000000, 4px -4px 0 #000000,
     -4px 4px 0 #000000;
+}
+
+@keyframes closeUp {
+  0% {
+    transform: translateZ(0%);
+  }
+  100% {
+    transform: translateZ(20px);
+  }
 }
