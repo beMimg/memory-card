@@ -140,7 +140,7 @@ p {
   .modal-title {
     text-shadow: 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
       -2px 2px 0 #000000;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .modal-content.end {
@@ -148,7 +148,7 @@ p {
   }
 
   .modal-small-text {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .scored-count {
