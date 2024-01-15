@@ -146,6 +146,7 @@ p {
   main {
     padding: 40px;
     grid-template-columns: repeat(auto-fit, minmax(50px, 70px));
+    padding-bottom: 100px;
   }
 
   .card-header {
