@@ -17,7 +17,9 @@ function App() {
   const statusIsWon = gameStatus === "won";
 
   useEffect(() => {
-    fetchData("https://dragonball-api.com/api/characters", setCharacters);
+    fetchData("https://dragonball-api.com/api/characters", (data) => {
+      setCharacters(data.items);
+    });
   }, []);
 
   function handleSelectedCard(id) {
@@ -59,18 +61,21 @@ function App() {
         {statusIsMenu && (
           <Modal
             condition={"menu"}
+            selectedCards={selectedCards}
             handleClick={() => handleRepeatGame()}
           ></Modal>
         )}
         {statusIsLost && (
           <Modal
             condition={"lost"}
+            selectedCards={selectedCards}
             handleClick={() => handleRepeatGame()}
           ></Modal>
         )}
         {statusIsWon && (
           <Modal
             condition={"won"}
+            selectedCards={selectedCards}
             handleClick={() => handleRepeatGame()}
           ></Modal>
         )}

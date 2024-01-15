@@ -53,6 +53,10 @@ p {
     font-size: 1.8rem;
   }
 
+  .scored-count {
+    font-size: 1.2rem;
+  }
+
   button {
     font-size: 1.5rem;
   }
@@ -89,6 +93,10 @@ p {
 
   .modal-small-text {
     font-size: 2rem;
+  }
+
+  .scored-count {
+    font-size: 1rem;
   }
 
   button {
@@ -135,8 +143,16 @@ p {
     font-size: 4rem;
   }
 
+  .modal-content.end {
+    height: 60%;
+  }
+
   .modal-small-text {
     font-size: 1.8rem;
+  }
+
+  .scored-count {
+    font-size: 1rem;
   }
 
   button {
