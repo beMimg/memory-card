@@ -16,7 +16,7 @@ If you select the same card twice, you lose the game.
 
 [Giphy API:](https://developers.giphy.com/) Used to fetch random gif images for the modals. 
 
-Dragon Ball API: Used to fetch Dragon Ball-related information for the cards. (https://web.dragonball-api.com/)
+[Dragon Ball API:](https://web.dragonball-api.com/) Used to fetch Dragon Ball-related information for the cards. 
 
 ##
 **Technologies Used:**
