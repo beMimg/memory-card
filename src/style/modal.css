@@ -61,6 +61,11 @@ a {
   font-size: 3rem;
   color: yellow;
   text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000;
+  text-align: center;
+}
+
+.modal-small-text.menu {
+  font-size: 2rem;
 }
 
 .scored-count {

@@ -37,9 +37,9 @@ export function Modal({ condition, handleClick, selectedCards }) {
           >
             {menu ? "Welcome" : won ? "Good Job!" : lost && "You lost"}
           </h1>
-          <p className="modal-small-text">
+          <p className={`modal-small-text ${menu && "menu"}`}>
             {menu
-              ? "Test your memory"
+              ? "Never click the same card twice"
               : won
               ? "You have great memory"
               : lost && "Nice try"}

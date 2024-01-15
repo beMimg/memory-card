@@ -53,6 +53,10 @@ p {
     font-size: 1.8rem;
   }
 
+  .modal-small-text.menu {
+    font-size: 1.2rem;
+  }
+
   .scored-count {
     font-size: 1.2rem;
   }
@@ -93,6 +97,10 @@ p {
 
   .modal-small-text {
     font-size: 2rem;
+  }
+
+  .modal-small-text.menu {
+    font-size: 1.5rem;
   }
 
   .scored-count {
